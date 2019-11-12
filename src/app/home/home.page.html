@@ -6,9 +6,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Título</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.titulo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Descripción</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.descripcion"></ion-input>
+  </ion-item>
+  <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
+  <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
+  <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
+
+  <h1>Lista de tareas</h1>
+  <ion-list>
+    <ion-item *ngFor="let documentTarea of arrayColeccionTareas" (click)="selecTarea(documentTarea)">
+      <ion-grid>
+        <ion-row>
+          <h2>{{documentTarea.data.titulo}}</h2>
+        </ion-row>
+        <ion-row>
+          <p>{{documentTarea.data.descripcion}}</p>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
