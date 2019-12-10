@@ -16,12 +16,11 @@
     <ion-input [(ngModel)]="tareaEditando.descripcion"></ion-input>
   </ion-item>
   <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
-  <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
-  <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
-
+  <!--<ion-button color="secondary" (click)="navigateToDetalle()">Detalle</ion-button> -->
   <h1>Lista de tareas</h1>
   <ion-list>
     <ion-item *ngFor="let documentTarea of arrayColeccionTareas" (click)="selecTarea(documentTarea)">
+      <!--selecTarea(documentTarea) cambiado por navigateToDetalle-->
       <ion-grid>
         <ion-row>
           <h2>{{documentTarea.data.titulo}}</h2>
