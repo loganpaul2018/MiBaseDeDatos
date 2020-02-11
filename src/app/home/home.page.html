@@ -7,15 +7,6 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-item>
-    <ion-label>Título</ion-label>
-    <ion-input [(ngModel)]="tareaEditando.titulo"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Descripción</ion-label>
-    <ion-input [(ngModel)]="tareaEditando.descripcion"></ion-input>
-  </ion-item>
-  <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
   <!--<ion-button color="secondary" (click)="navigateToDetalle()">Detalle</ion-button> -->
   <h1>Lista de tareas</h1>
   <ion-list>
@@ -32,4 +23,30 @@
     </ion-item>
   </ion-list>
 
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="selecTarea('nuevo')">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <!-- Tab bar -->
+      <ion-tab-bar slot="bottom">
+
+        <ion-tab-button expand="full" (click)="abrircontactos()">
+          <ion-icon name="call"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button expand="full" (click)="abrirhome()">
+          <ion-icon name="send"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button expand="full" (click)="abririnfo()">
+          <ion-icon name="information-circle"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

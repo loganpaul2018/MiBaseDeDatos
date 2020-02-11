@@ -1,5 +1,7 @@
 {
   "name": "MiBaseDeDatos",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

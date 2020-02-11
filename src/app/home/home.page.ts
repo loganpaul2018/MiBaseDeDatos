@@ -47,4 +47,16 @@ obtenerListaTareas(){
     this.idTareaSelec = tareaSelec.id;
     this.router.navigate(["/detalle/"+this.idTareaSelec]);
   }
+  abrircontactos(){
+    this.router.navigate(["/contactos/"]);
+
+  }
+
+  abririnfo(){
+    this.router.navigate(["/info/"]);
+  }
+
+  abrirhome(){
+    this.router.navigate(["/home/"]);
+  }
 }

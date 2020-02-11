@@ -37,4 +37,18 @@
     </ion-item>
     <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
     <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
+
+    <!-- <div *ngIf="{{ id }}=='nuevo'"> -->
+    <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
+    <ion-button (click)="clicCancelar()">Cancelar</ion-button>
+    <!-- </div> -->
+    <br>
+    <ion-icon name="logo-whatsapp" (click)="compartir('whatsapp')"></ion-icon>
+
+    <ion-icon name="shirt" (click)="compartir('facebook')"></ion-icon>
+    <ion-icon name="shirt" (click)="compartir('twitter')"></ion-icon>
+
+    <!-- <ion-button (click)="cargarImagePicker()">Subir Imagen</ion-button> -->
+    <!--<ion-button (click)="borrarFile()">Eliminar Imagen</ion-button> -->
+    <!-- <ion-button icon-only (click)=""></ion-button> -->
   </ion-content>
