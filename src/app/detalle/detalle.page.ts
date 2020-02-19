@@ -137,7 +137,7 @@ export class DetallePage implements OnInit {
 
     }
   }
-  /*
+  
   async cargarImagePicker(){
     // Mensaje de espera mientras se sube la imagen
     const loading = await this.loadingController.create({
@@ -209,7 +209,7 @@ export class DetallePage implements OnInit {
         console.log(err);
       });
   }
- */
+ 
   ngOnInit() {
     //Saca el Id
     this.id = this.activatedRoute.snapshot.paramMap.get("id");

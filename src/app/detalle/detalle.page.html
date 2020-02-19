@@ -35,6 +35,12 @@
         <ion-label>Numero de edición:</ion-label>
         <ion-input [(ngModel)]="tareaEditando.numeroEdicion"></ion-input>
     </ion-item>
+
+    <ion-item>
+        <ion-label>Imagen</ion-label>
+        <ion-button (click)="cargarImagePicker()">Subir imagen</ion-button>
+        <ion-button (click)="borrarFile()">Borrar imagen</ion-button>
+    </ion-item>
     <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
     <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
 

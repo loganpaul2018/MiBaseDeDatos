@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
@@ -30,6 +31,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     SplashScreen,
     ImagePicker,
     SocialSharing,
+    CallNumber,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
