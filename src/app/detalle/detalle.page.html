@@ -41,13 +41,14 @@
         <ion-button (click)="cargarImagePicker()">Subir imagen</ion-button>
         <ion-button (click)="borrarFile()">Borrar imagen</ion-button>
     </ion-item>
-    <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
-    <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
-
-    <!-- <div *ngIf="{{ id }}=='nuevo'"> -->
-    <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
-    <ion-button (click)="clicCancelar()">Cancelar</ion-button>
-    <!-- </div> -->
+    <ng-container *ngIf=" id!=='nuevo'" >
+      <ion-button (click)="clicBotonBorrar()">Borrar tarea</ion-button>
+      <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
+    </ng-container>
+    <ng-container *ngIf=" id=='nuevo'">
+      <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
+      <ion-button (click)="clicCancelar()">Cancelar</ion-button>
+    </ng-container>
     <br>
     <ion-icon name="logo-whatsapp" (click)="compartir('whatsapp')"></ion-icon>
 

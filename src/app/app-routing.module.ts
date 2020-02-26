@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: 'detalle/:id', loadChildren: './detalle/detalle.module#DetallePageModule' },
   { path: 'contactos', loadChildren: './contactos/contactos.module#ContactosPageModule' },
   { path: 'info', loadChildren: './info/info.module#InfoPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
 ];
 
 @NgModule({
